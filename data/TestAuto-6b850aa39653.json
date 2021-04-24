@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "testauto-311607",
+  "private_key_id": "6b850aa39653ea070b7f77fcee0c1150d48944d6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDH7DLkRYcRmNoq\nrF46MONsDd8qIm/KDY0c5btrKcn4QzW6552Ze9izh+/ZQZp3rlZCmNqRYpJ5iij1\nd1vWi+zQsf09dKcjnzJPXr6v8gfJlm76DveUVooW9UzkoFic1keyoL5b+MpbZE+z\n3UqDkvuTTg7e8KjpaUmlRb66iQTbPm084CGom/fLarYd7AiqyCxWz90FDOs+dig5\n6QAaMSaXB7shfQu15hirxp2bzVaP+Lpkf6kd7IHEO3+7nayYUQfvocW22JeUGnpN\n5r2jFFAlU0voMnW8JenJMp1tQm3xbOc90KAOTWY+3/oDrYPsoFwS9Bijs4P7hxM/\nsRomPgkvAgMBAAECggEAJNxwf7UwE7cGlrKkRv9nly8xk++4g90exRK4jSgt1Ifz\n2qvE251Blcx9FSYq6GEtB2dueTre/ejS53tj4/l1pv8CTbf57y/1kzvJVeB+vhTu\nDk3/KQsRt+zvigHkhLpfithncMa87L/gkC2/hOXvW7gbNtDRnAOtL/tdkMAdtJyJ\nEohXalx1pPgyqbQdjftT3cFzA3dEvK8zcoAm0+025Buto6wT1O8OJqIMoEDwlf1Z\nwZpj+SqWlEg73tOofh+wNbhw4BjWnlWo+a6II7+Yky+3mn6pi6R+z8oLJ0Prrd47\n9GRHOBqmslG7CU+4wgADr4ZaUoaFsc7tK0wKR1y9bQKBgQDk1p+zaM9YYYeMJKoR\n8EeMbr2VMzxfVtvjhPt+jA7ExdTNgGXhR0RasArrCfPDJiSeiPmXWH1BLIz6LRKk\nN5doCCjrecRXBFFsh9cCzZ5EJUNDtLkphdYs0nKkeGaitNkdschrgVsl1Vj4d15a\nP/bVlsO1WLKFrTEBJk0Cm9nRVQKBgQDfpvSN7a9zGBzyG8YzZyYh2TwNr+6wlBmC\nGWkTmUGKM4gqHkNLweJeMqSRT+AlmQLMIBQGJkjhIatndf+k0boYICbcaMqt9kma\ndkvb9nFOEriiTYxM9TIZmpVpRF4kM2UhCssEm/208irfHr2lV7C5f/224nRmJEpK\ntAXFSdEAcwKBgBaMt6v8NgJlie/bZQ7jeIl0GCZtqBNVAdIHtqifsIzfWbruXhu2\n5BtzoX/LuUOPrKgao02woJcdhr7YVi/scnUD6NRbaWeRu1xQfnV+QYxBh8FSO7TF\nxXchPb7LRoHeBE8Sx8cgNhUiUuQZDykhiHc/pgVmuiDGEkAkwA3zwaEJAoGBAJBk\nEok7BcXRsIZihhCTrJu3yzyu8/QOeXV0AFHF5PlbkbJXfW0AjKvyGCs0nWrIoXS1\n1RevSegHO8j89oIrYPDIeS5dfVTYp+ZQL2OgdMBJ9+fZFxZsSt8a3RFsMTc/8y9k\n73NXXnGe0yzfhOKlfZQVXPDgvPNgxJH8LamUoZmfAoGAduVrPi0WBC1csX/aSUTA\nrlxIfbsSgQylhkIn6XNxGXQxz7Bf8DMiuYLu/Nl1um4nA2BF6lSOPP/KYfRCrKor\nfzvKkQ0tVwVQQlQWugQiwfS9ORikIVXp2Kaa/LWsEkg5zrLULkmsVUY7AnyxcGG7\n+l9tXY+mbXhx7kypMRMRnTc=\n-----END PRIVATE KEY-----\n",
+  "client_email": "florinauto@testauto-311607.iam.gserviceaccount.com",
+  "client_id": "116259351501517683643",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/florinauto%40testauto-311607.iam.gserviceaccount.com"
+}

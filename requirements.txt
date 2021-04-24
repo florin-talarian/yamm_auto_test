@@ -1,0 +1,7 @@
+pytest
+pytest-tldr
+pytest-instafail
+pytest-dependency
+seleniumbase
+gspread
+oauth2client

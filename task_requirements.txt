@@ -1,0 +1,67 @@
+Objective :
+Implement simple E2E tests on YAMM, one of Awesome Gapps products 
+
+
+Description :
+
+Yet Another Mail Merge (YAMM) is an easy to use Google Spreadsheet add-on for users to perform a mail merge. Select a draft written in Gmail, replace template keys with names and other information from the spreadsheet and automatically send personalized emails to up to 1,500 recipients per day.
+
+You will implement an automated e2e test on the following YAMM functionality : Sending email to more than one recipient.
+
+The following test and automations should be performed : 
+Opens the spreadsheet created in the prerequisites section below
+Add more than one user in the sheet Open the add-on and navigate to the correct item with appropriate waiting for elements to be shownInput a custom sender name in the input field
+Uncheck the tracking checkbox
+Select the Gmail Draft created in the prerequisites section below
+Start the mail merge
+Check that the sheet has updated the status of each recipient
+Bonus point : Check that emails has been correctly received on Gmail
+
+
+Prerequisites/Set up
+
+Create a new Google Sheet
+Install YAMM add on to it
+Prepare a Gmail draft you are going to be using for testing
+In the sheet create the following columns - Email Address, Full Name, Prefix, First Name,	Last Name, Nickname, Company, Phone, Merge status
+You can also try to import contacts to see the required columns
+
+
+Implementation
+
+Develop the way you would if this was a real project (comment code if required, keep code organized) and push your app to a version control system such as github or bitbucket. Use a specific development branch and make a pull request to the user below with frequent commits based on logical steps of the process when solving the problem. Make sure to provide guidance in the readme on how to run the tests and that tests can be rerun multiple times.
+
+For github : add the user kengenouel as collaborator
+For bitbucket : add ken.genouel@revevol.eu as user
+
+Please note that we do not require a full production ready product but we will assess the general quality of the implementation.
+
+Answer the following questions in the email you will be sending once the task is done or in a google doc and attach it to the same email.
+
+If you have more time, don’t hesitate to implement an additional test of another YAMM functionality
+
+
+
+Post implementation feedback :
+
+Is your testing suite black or white box testing?
+
+Do you think there were more important features of YAMM to be tested? If yes, which features and how would you approach them?
+
+If you could, what would you request from the devs to make the testing easier?
+
+How much do you think the restriction of not accessing the DB impacts the testing scenarios? (could be skipped based on the selected part to test)
+
+How would you reset the changes the test made to ensure that the next run will start from a blank state? How would you ensure that the resetting won't happen while a test is being ran? (connected to the next question)
+
+When should your test suite be run?
+
+
+How much time on average does your test suite run? How can it be optimised? What takes the most of the run time?
+
+On a scale of 1 to 10, are you satisfied with the result ? Is there anything that needs more attention ?
+
+
+
+
+Thank you !
