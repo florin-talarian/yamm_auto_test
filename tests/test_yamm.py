@@ -13,6 +13,7 @@ class TestYamm(StepsYamm):
     @pytest.mark.dependency(name="merge_mails")
     def test_merge_mails(self):
         self.given_login_into_google()
+        self.and_a_draft_message_is_saved()
         self.and_populate_and_open_spreadsheets()
         self.and_open_yamm_mail_merge()
         self.then_mail_merge_is_started()
@@ -23,3 +24,4 @@ class TestYamm(StepsYamm):
     def test_check_mail_was_sent(self):
         self.given_login_into_google()
         self.then_yamm_mail_is_present_in_inbox()
+        self.and_mail_contains_correct_data()

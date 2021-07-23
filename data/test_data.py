@@ -10,5 +10,5 @@ SPREADSHEET_URL = "https://docs.google.com/spreadsheets/d/14Xu2L7K1mXAUZiZQK-800
 SPREADSHEET_NAME = "QA Task"
 SENDER_NAME = "TestAutoSender"
 DRAFT_NAME = "TestDraftAuto"
-TEST_MAIL = "florin.barbu.python@gmail.com" # it's just a test account created for this purpose, no need for encryption
-TEST_MAIL_PASS = "89c39Pbe_!23" # it's just a test account created for this purpose, no need for encryption
+TEST_MAIL = "florin.barbu.python@gmail.com"  # it's just a test account created for this purpose, no need for encryption
+TEST_MAIL_PASS = "89c39Pbe_!234"  # it's just a test account created for this purpose, no need for encryption

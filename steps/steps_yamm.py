@@ -11,6 +11,7 @@ from pages.spreadsheet import GoogleSpreadSheet
 from data.test_data import GMAIL_URL, SPREADSHEET_URL, SENDER_NAME, TEST_MAIL,\
     TEST_MAIL_PASS, DRAFT_NAME, SPREADSHEET_NAME
 from libs.commons import retry_until_func_passes, open_spreadheet
+from libs.gmail_api_lib import GMailApi
 
 
 class StepsYamm(PageGmail, GoogleSpreadSheet, Yamm):
@@ -20,18 +21,32 @@ class StepsYamm(PageGmail, GoogleSpreadSheet, Yamm):
         self.open_page(GMAIL_URL)
         self.maximize_window()
 
+    @pytest.fixture(scope="function", autouse=True)
+    def cleanup_after_test(self):
+        yield
+        if hasattr(self, "draft_id"):
+            self.and_draft_is_deleted()
+
     def given_login_into_google(self):
-        self.set_username(TEST_MAIL)
-        self.click_next()
-        self.set_password(TEST_MAIL_PASS)
-        self.click_next()
+        # self.set_username(TEST_MAIL)
+        # self.click_next()
+        # self.set_password(TEST_MAIL_PASS)
+        # self.click_next()
         self.check_gmail_loaded()
 
+    def and_a_draft_message_is_saved(self):
+        g_api = GMailApi()
+        g_api.create_message("", "", "TestDraftAuto", "TestDraftAuto")
+        self.draft_id = g_api.save_draft()
+
+    def and_draft_is_deleted(self):
+        GMailApi().delete_draft(self.draft_id)
+
     def and_populate_and_open_spreadsheets(self):
-        sheet = open_spreadheet(SPREADSHEET_NAME)
-        sheet.delete_rows(2, 3)
-        sheet.insert_row(["barbuflorinadrian@gmail.com", "Barbu Florin", "Mr", "Florin", "Barbu", "Flo", "Google", "71233412"], 2)
-        sheet.insert_row([TEST_MAIL, "Florin Barbu", "Sir", "Barbu", "Florin", "B", "Apple", "32432423"], 3)
+        g_spreadheet = open_spreadheet(SPREADSHEET_NAME)
+        g_spreadheet.delete_rows(2, 3)
+        g_spreadheet.insert_row(["barbuflorinadrian@gmail.com", "Barbu Florin", "Mr", "Florin", "Barbu", "Flo", "Google", "71233412"], 2)
+        g_spreadheet.insert_row([TEST_MAIL, "Florin Barbu", "Sir", "Barbu", "Florin", "B", "Apple", "32432423"], 3)
         self.open_new_tab()
         self.open_page(SPREADSHEET_URL)
 
@@ -67,3 +82,10 @@ class StepsYamm(PageGmail, GoogleSpreadSheet, Yamm):
 
     def and_message_sent_popup_is_displayed(self):
         self.check_message_sent()
+
+    def and_mail_contains_correct_data(self):
+        g_api = GMailApi()
+        messages = g_api.list_messages(query="subject: testdraftauto newer_than:1d")
+        last_message = g_api.get_message(messages["messages"][0]["id"])
+        assert last_message["snippet"] == DRAFT_NAME
+        assert f"{SENDER_NAME} <{TEST_MAIL}>" in str(last_message["payload"]["headers"])

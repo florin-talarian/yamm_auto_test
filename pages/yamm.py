@@ -6,6 +6,7 @@ Created on Apr 24, 2021
 '''
 from base.test_base import TestBase
 from time import sleep
+from libs.commons import retry_until_func_passes
 
 
 class Yamm(TestBase):
@@ -30,14 +31,14 @@ class Yamm(TestBase):
         self.switch_to_frame(self.THIRD_FRAME)
 
     def click_continue(self):
-        self.click_on_item(self.CONTINUE_BUTTON)
+        self.click_on_item(self.CONTINUE_BUTTON, timeout=30)
 
     def set_sender(self, value):
         self.type_into_item_by_id(self.SENDER, value)
 
+    @retry_until_func_passes(20, 1)
     def set_draft(self, value):
         self.click_on_item_by_id(self.DRAFT)
-        sleep(1) # we need this sleep to open the dropdown, traditional select from dropdown does't seem to work for this element
         self.type_into_item_by_id(self.DRAFT, value)
 
     def uncheck_tracking_checkbox(self):

@@ -2,8 +2,13 @@
 .project
 .pydevproject
 .settings/
+Scripts
+include
+man
+share
 LICENSE.txt
-
+pyvenv.cfg
+user_data
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -31,7 +31,7 @@ class TestBase():
         self._sb.click(selector, by=By.ID, timeout=timeout)
 
     def type_into_item(self, selector, text, timeout=None):
-        self._sb.type(selector, text=text, timeout=timeout, retry=True)
+        self._sb.type(selector, text=text, timeout=timeout)
 
     def type_into_item_by_id(self, selector, text, timeout=None):
         self._sb.type(selector, text=text, by=By.ID, timeout=timeout, retry=True)

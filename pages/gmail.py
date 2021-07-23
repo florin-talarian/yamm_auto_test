@@ -6,6 +6,7 @@ Created on Apr 23, 2021
 '''
 from base.test_base import TestBase
 from data.test_data import DRAFT_NAME, SENDER_NAME
+from libs.commons import retry_until_func_passes
 
 
 class PageGmail(TestBase):
@@ -20,6 +21,7 @@ class PageGmail(TestBase):
     def set_username(self, value):
         self.type_into_item(self.USERNAME, value)
 
+    @retry_until_func_passes(10, 0.1)
     def click_next(self):
         self.click_on_item(self.NEXT_BUTTON)
 
